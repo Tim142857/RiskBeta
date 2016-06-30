@@ -1,0 +1,97 @@
+body {
+    position:relative;
+}
+
+.banniere{
+    width:100%;
+    height:200px;
+}
+
+td{
+    opacity:0.6;
+}
+
+.grille-complete{
+    border:5px solid black;
+}
+
+.case td{
+    width:30px;
+    height:30px;
+}
+
+.case{
+    border:3px solid red !important;
+}
+
+td img{
+    width:20px;
+    height:20px;
+    margin: 2px 2px 2px 2px;
+}
+
+.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item {
+    padding: 0.5em 0 0.5em 3em;
+}
+.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+    height: 24px;
+    width: 24px;
+    top: 0.1em;
+}
+.ui-icon.croixRouge {
+    background-image: url("../images/croixRouge.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ui-icon.croixVerte {
+    background-image: url("../images/croixVerte.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ui-icon.croixRose {
+    background-image: url("../images/croixRose.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ui-icon.croixJaune {
+    background-image: url("../images/croixJaune.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.selectionne{
+    opacity:1;
+}
+
+.messageUser{
+    height:20px;
+}
+
+#imgSlide{
+    height:30px;
+    border:1px solid black;
+    text-align: center;
+    width: 100%;
+    margin-top:-21px;
+
+}
+
+#imgSlide img{
+    height:25px;
+    width:25px;
+    margin: 2px 0px 0px 2px;
+}
+
+#formFinTour{
+    margin-top: -15px;
+}
+
+#stats{
+    border:1px solid black;
+}
+
+#divChargement{
+    position:absolute;
+    top:500px;
+    left:550px;
+}

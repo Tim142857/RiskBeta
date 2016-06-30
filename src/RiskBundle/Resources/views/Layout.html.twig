@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Risk</title>
+
+        {# chargement du css #}
+        <link href="{{ asset('bundles/risk/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/risk/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/risk/css/jquery-ui.theme.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/risk/css/jquery-ui.structure.min.css') }}" rel="stylesheet">
+
+        {# chargement du js #}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/risk/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/risk/js/jsGeneral.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/risk/js/jquery-ui.min.js') }}"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <img class="img-responsive banniere" alt="banniere" src="{{ asset('bundles/risk/images/banniere2.png') }}">
+
+
+                <nav class="navbar navbar-default ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-xs-12">
+                                <ul class="nav navbar-nav">
+                                    <li id="Accueil"><a href="{{ url('accueil') }}">ACCUEIL</a></li>
+                                    <li id="Regles"><a href="{{ url('regles') }}">REGLES</a></li>
+                                    <li id="Jouer"><a href="{{ url('jeu') }}">JOUER</a></li>
+                                    <li id="Classements"><a href="">CLASSEMENTS</a></li>
+                                    <li id="nous-contacter"><a href="">NOUS CONTACTER</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

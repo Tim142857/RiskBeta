@@ -1,0 +1,22 @@
+accueil:
+    path:     /
+    defaults: { _controller: RiskBundle:Default:Accueil }
+regles:
+    path:     /regles
+    defaults: { _controller: RiskBundle:Default:Regles }
+jeu:
+    path:     /jeu
+    defaults: { _controller: RiskBundle:Default:jeu }
+lancement:
+    path:     /lancement
+    defaults: { _controller: RiskBundle:Default:lancement }
+attaque:
+    path:     /attaque
+    defaults: { _controller: RiskBundle:Default:attaque }
+reloadGrille:
+    path:     /reloadGrille
+    defaults: { _controller: RiskBundle:Default:reloadGrille }
+addSoldiers:
+    path:     /addSoldiers
+    defaults: { _controller: RiskBundle:Default:addSoldiers }    
+    

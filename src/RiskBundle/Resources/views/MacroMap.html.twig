@@ -1,0 +1,33 @@
+{% macro generateMap (height, width, boxes, player0, player1, player2) %}
+    {% set numCase= 1 %}
+    <table style="border:2px solid black">
+        {% for i in 1..height %}{# ligne de cases #}
+            <tr>
+                {% for j in 1..width %}
+                    <td class="case" data-numCase="{{ numCase }}" style="background-color: {{ boxes[numCase-1].getPlayer().getColor() }};" data-idCase="{{ boxes[numCase-1].getId() }}" >{# case #}
+                        {% set numSlot= 1 %}
+                        <table style="border:2px solid red">
+                            {% for k in 1..3 %}{# ligne de slots #}
+                                <tr>
+                                    {% for l in 1..3 %}{# slot #}
+                                        {% set slot=boxes[numCase-1].getSlots()[numSlot-1] %}
+                                        <td class="slot" data-numCase="{{ numCase }}" data-numSlot="{{ boxes[numCase-1].getSlots()[numSlot-1].getId() }}" data-idCase="{{ boxes[numCase-1].getId() }}" data-player="{{ boxes[numCase-1].getPlayer().getName() }}" {% if slot.getFree() %}data-free="free"{% else %}data-free="full"{% endif %}>
+                                            {% if slot.getFree() %}
+                                                <img src="{{ asset('bundles/risk/images/rond-vide.png') }}" alt="free" style="width:15px; height:15px;">
+                                            {% else %}
+                                                <img src="{{ asset('bundles/risk/images/'~boxes[numCase-1].getPlayer().getSymbol()) }}" alt="full" style="width:15px; height:15px;">
+                                            {% endif %}
+                                        </td>
+                                        {% set numSlot= numSlot+ 1%}
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </td>
+                    {% set numCase= numCase+1 %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endmacro %}
+

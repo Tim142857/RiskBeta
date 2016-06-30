@@ -1,0 +1,74 @@
+<?php
+
+namespace RiskBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Box
+ *
+ * @ORM\Table(name="box", indexes={@ORM\Index(name="idplayer", columns={"player"})})
+ * @ORM\Entity
+ */
+class Box
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Player
+     *
+     * @ORM\ManyToOne(targetEntity="Player", inversedBy="boxes")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="player", referencedColumnName="id")
+     * })
+     */
+    private $player;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="RiskBundle\Entity\Slot", mappedBy="box", cascade={"remove", "persist"})
+     */
+    private $slots;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set player
+     *
+     * @param \RiskBundle\Entity\Player $player
+     *
+     * @return Box
+     */
+    public function setPlayer(\RiskBundle\Entity\Player $player = null)
+    {
+        $this->player = $player;
+
+        return $this;
+    }
+
+    /**
+     * Get player
+     *
+     * @return \RiskBundle\Entity\Player
+     */
+    public function getPlayer()
+    {
+        return $this->player;
+    }
+}

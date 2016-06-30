@@ -1,0 +1,21 @@
+{% extends "RiskBundle::Layout.html.twig" %}
+{% block body %}
+    Test
+    {#{% import "RiskBundle::macroMap.html.twig" as macroMap %}
+    {{ macroMap.generateMap(6, 6, boxes, player1, player2) }}#}
+    {#{{ html }}#}
+    <p>{{ html|raw }}</p>
+
+    <script>
+        $(document).ready(function () {
+            $('.slot').mouseover(function () {
+                $(this).find('img').width('20px');
+                $(this).find('img').height('20px');
+            })
+                    .mouseleave(function () {
+                        $(this).find('img').width('15px');
+                        $(this).find('img').height('15px');
+                    });
+        });
+    </script>
+{% endblock %}
