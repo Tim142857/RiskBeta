@@ -16,8 +16,8 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e5aa7ba0d4c2ecd0ffb96dfc014c04874a14ea4586649536c7a406370c5d0416 = $this->env->getExtension("native_profiler");
-        $__internal_e5aa7ba0d4c2ecd0ffb96dfc014c04874a14ea4586649536c7a406370c5d0416->enter($__internal_e5aa7ba0d4c2ecd0ffb96dfc014c04874a14ea4586649536c7a406370c5d0416_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Risk/Layout.html.twig"));
+        $__internal_2d1ea061c3a474151d6296f34df37ed8971f4b1040ab0c89455fab439ed7dd73 = $this->env->getExtension("native_profiler");
+        $__internal_2d1ea061c3a474151d6296f34df37ed8971f4b1040ab0c89455fab439ed7dd73->enter($__internal_2d1ea061c3a474151d6296f34df37ed8971f4b1040ab0c89455fab439ed7dd73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Risk/Layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -69,10 +69,15 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
     </head>
 
     <body>
+        <noscript>
+        Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.
+        Voici les <a href=\"http://www.enable-javascript.com/fr/\" target=\"_blank\">
+            instructions pour activer JavaScript dans votre navigateur Web</a>.
+        </noscript>
         <div class=\"container\">
             <header>
                 <img class=\"img-responsive banniere\" alt=\"banniere\" src=\"";
-        // line 30
+        // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/risk/images/banniere2.png"), "html", null, true);
         echo "\">
 
@@ -83,15 +88,15 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
                             <div class=\"col-md-10 col-xs-12\">
                                 <ul class=\"nav navbar-nav\">
                                     <li id=\"Accueil\"><a href=\"";
-        // line 38
+        // line 43
         echo $this->env->getExtension('routing')->getUrl("accueil");
         echo "\">ACCUEIL</a></li>
                                     <li id=\"Regles\"><a href=\"";
-        // line 39
+        // line 44
         echo $this->env->getExtension('routing')->getUrl("regles");
         echo "\">REGLES</a></li>
                                     <li id=\"Jouer\"><a href=\"";
-        // line 40
+        // line 45
         echo $this->env->getExtension('routing')->getUrl("jeu");
         echo "\">JOUER</a></li>
                                     <li id=\"Classements\"><a href=\"\">CLASSEMENTS</a></li>
@@ -106,9 +111,9 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
 
             <div class=\"container\">
                 ";
-        // line 52
+        // line 57
         $this->displayBlock('body', $context, $blocks);
-        // line 54
+        // line 59
         echo "            </div>
         </div>
     </div>
@@ -118,20 +123,20 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
 
 ";
         
-        $__internal_e5aa7ba0d4c2ecd0ffb96dfc014c04874a14ea4586649536c7a406370c5d0416->leave($__internal_e5aa7ba0d4c2ecd0ffb96dfc014c04874a14ea4586649536c7a406370c5d0416_prof);
+        $__internal_2d1ea061c3a474151d6296f34df37ed8971f4b1040ab0c89455fab439ed7dd73->leave($__internal_2d1ea061c3a474151d6296f34df37ed8971f4b1040ab0c89455fab439ed7dd73_prof);
 
     }
 
-    // line 52
+    // line 57
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e65602a9bea5398c92385662e5ee3b5b11513c9cbcd05015950ac1f2f2ebe067 = $this->env->getExtension("native_profiler");
-        $__internal_e65602a9bea5398c92385662e5ee3b5b11513c9cbcd05015950ac1f2f2ebe067->enter($__internal_e65602a9bea5398c92385662e5ee3b5b11513c9cbcd05015950ac1f2f2ebe067_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d37a8be915373fa720601f1cd4213231f58ebcbf26caacc8fb2a607ac556feac = $this->env->getExtension("native_profiler");
+        $__internal_d37a8be915373fa720601f1cd4213231f58ebcbf26caacc8fb2a607ac556feac->enter($__internal_d37a8be915373fa720601f1cd4213231f58ebcbf26caacc8fb2a607ac556feac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 53
+        // line 58
         echo "                ";
         
-        $__internal_e65602a9bea5398c92385662e5ee3b5b11513c9cbcd05015950ac1f2f2ebe067->leave($__internal_e65602a9bea5398c92385662e5ee3b5b11513c9cbcd05015950ac1f2f2ebe067_prof);
+        $__internal_d37a8be915373fa720601f1cd4213231f58ebcbf26caacc8fb2a607ac556feac->leave($__internal_d37a8be915373fa720601f1cd4213231f58ebcbf26caacc8fb2a607ac556feac_prof);
 
     }
 
@@ -147,7 +152,7 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
 
     public function getDebugInfo()
     {
-        return array (  132 => 53,  126 => 52,  112 => 54,  110 => 52,  95 => 40,  91 => 39,  87 => 38,  76 => 30,  65 => 22,  61 => 21,  57 => 20,  54 => 19,  49 => 16,  45 => 15,  41 => 14,  36 => 13,  23 => 1,);
+        return array (  137 => 58,  131 => 57,  117 => 59,  115 => 57,  100 => 45,  96 => 44,  92 => 43,  81 => 35,  65 => 22,  61 => 21,  57 => 20,  54 => 19,  49 => 16,  45 => 15,  41 => 14,  36 => 13,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -177,6 +182,11 @@ class __TwigTemplate_b77bec6a97b89d1384dba2c9aecdb124caaa30024546a46b4d7df2316da
 /*     </head>*/
 /* */
 /*     <body>*/
+/*         <noscript>*/
+/*         Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.*/
+/*         Voici les <a href="http://www.enable-javascript.com/fr/" target="_blank">*/
+/*             instructions pour activer JavaScript dans votre navigateur Web</a>.*/
+/*         </noscript>*/
 /*         <div class="container">*/
 /*             <header>*/
 /*                 <img class="img-responsive banniere" alt="banniere" src="{{ asset('bundles/risk/images/banniere2.png') }}">*/

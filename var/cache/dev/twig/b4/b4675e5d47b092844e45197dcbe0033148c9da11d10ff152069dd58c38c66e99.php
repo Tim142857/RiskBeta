@@ -21,20 +21,20 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_369f411a0b4931e6c2f3e7bc6576141d30d6f45872500171260bf51d7f127126 = $this->env->getExtension("native_profiler");
-        $__internal_369f411a0b4931e6c2f3e7bc6576141d30d6f45872500171260bf51d7f127126->enter($__internal_369f411a0b4931e6c2f3e7bc6576141d30d6f45872500171260bf51d7f127126_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "RiskBundle::Jeu.html.twig"));
+        $__internal_465cb5e4808f4d4597594d7d381df81fe1cfcf33136b70f450743584ed3614d5 = $this->env->getExtension("native_profiler");
+        $__internal_465cb5e4808f4d4597594d7d381df81fe1cfcf33136b70f450743584ed3614d5->enter($__internal_465cb5e4808f4d4597594d7d381df81fe1cfcf33136b70f450743584ed3614d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "RiskBundle::Jeu.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_369f411a0b4931e6c2f3e7bc6576141d30d6f45872500171260bf51d7f127126->leave($__internal_369f411a0b4931e6c2f3e7bc6576141d30d6f45872500171260bf51d7f127126_prof);
+        $__internal_465cb5e4808f4d4597594d7d381df81fe1cfcf33136b70f450743584ed3614d5->leave($__internal_465cb5e4808f4d4597594d7d381df81fe1cfcf33136b70f450743584ed3614d5_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fb2cbeaabe5f7c86caa1961039f5ae7633a975205ad831e6c2c3bd6ee3918304 = $this->env->getExtension("native_profiler");
-        $__internal_fb2cbeaabe5f7c86caa1961039f5ae7633a975205ad831e6c2c3bd6ee3918304->enter($__internal_fb2cbeaabe5f7c86caa1961039f5ae7633a975205ad831e6c2c3bd6ee3918304_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9cf229b3c8519874a971e635b951b9891f40e947dc1d2cc3eb3b4f62309faba2 = $this->env->getExtension("native_profiler");
+        $__internal_9cf229b3c8519874a971e635b951b9891f40e947dc1d2cc3eb3b4f62309faba2->enter($__internal_9cf229b3c8519874a971e635b951b9891f40e947dc1d2cc3eb3b4f62309faba2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -191,14 +191,8 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
                 \$('.messageTour').find('p').text(tour);
 
                 if (modeValue === \"selection\") {
-
                     \$('body').on(\"click\", \"td .slot\", function () {
-                        console.log('debut traitement click');
-        ";
-        // line 83
-        echo "        ";
-        // line 84
-        echo "                        \$('.messageUser').find('p').text('');
+                        \$('.messageUser').find('p').text('');
                         //Enregistrement des cases selectionnées
                         if (\$(this).data('player') === modePlayer) {
                             if (\$(this).closest('table').find('.slot[data-free=\"' + 'full' + '\"]').length > 1) {//Verification que la case comporte plus d'un soldat
@@ -251,7 +245,7 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
                             stringNewSlots += \$(this).data('numslot') + '/';
                             newSoldats = newSoldats + 1;
                             \$(this).find('img').attr('src', '";
-        // line 136
+        // line 132
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/risk/images/"), "html", null, true);
         echo "' + playerSymbol);
                             if (newSoldats === count) {
@@ -272,13 +266,13 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
                     if (\$(\"#stats td\").is(\":hidden\")) {
                         \$(\"#stats td\").slideDown(\"slow\");
                         \$(\"#imgSlide img\").attr('src', '";
-        // line 154
+        // line 150
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/risk/images/flecheHaut.png"), "html", null, true);
         echo "');
                     } else {
                         \$(\"#stats td\").slideUp(\"slow\");
                         \$(\"#imgSlide img\").attr('src', '";
-        // line 157
+        // line 153
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("/bundles/risk/images/flecheBas.png"), "html", null, true);
         echo "');
                     }
@@ -288,31 +282,26 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
                     \$.ajax({
                         type: 'POST',
                         url: '";
-        // line 164
+        // line 160
         echo $this->env->getExtension('routing')->getUrl("attaque");
         echo "',
                         dataType: 'json',
                         data: 'caseAttaquante=' + caseAttaquante + '&caseAttaquee=' + caseAttaquee,
                         success: function (data) {
-                            console.log('ajax effectué');
                             //Reinitialisation des cases
                             caseAttaquante = '';
                             caseAttaquee = '';
-                            console.log('attaquant: ' + caseAttaquante);
-                            console.log('defenseur: ' + caseAttaquee);
                             \$.ajax({
                                 type: 'POST',
                                 url: '";
-        // line 176
+        // line 169
         echo $this->env->getExtension('routing')->getUrl("reloadGrille");
         echo "',
                                 dataType: 'json',
                                 data: 'noParameter',
                                 success: function (data) {
-                                    console.log('reloadGrille...');
                                     \$('.grille').remove();
                                     var newGrille = data.grilleHTML;
-                                    console.log('chargement new grille');
                                     \$('#formFinTour').after(newGrille);
                                     \$('#player0').find('.boxes-player').text(data.player0.nbBoxes);
                                     \$('#player1').find('.boxes-player').text(data.player1.nbBoxes);
@@ -339,42 +328,37 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
                     var numCaseAttaquante = \$('.case').find(\"[data-idcase='\" + caseAttaquante + \"']\").data('numcase');
                     var numCaseAttaquee = \$('.case').find(\"[data-idcase='\" + caseAttaquee + \"']\").data('numcase');
                     var ecartCase = numCaseAttaquante - numCaseAttaquee;
-                    console.log('numCaseAttaquante :' + numCaseAttaquante);
-                    console.log('numCaseAttaquee: ' + numCaseAttaquee);
-                    console.log('ecart case: ' + ecartCase);
                     //Je gere les cas ou case attaquante n est pas sur une bordure
                     if (numCaseAttaquante > width && numCaseAttaquante < (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {
-                        console.log('case pas sur bordure');
+                        
                         if (ecartCase === width || ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante <= width && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la première ligne
-                        console.log('case premiere ligne');
+                       
                         if (ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante > (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la derniere ligne
-                        console.log('case derniere ligne');
+                       
                         if (ecartCase === width || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante % width === 0) {//Si la case est sur la bordure droite
-                        console.log('case bordure droite');
-                        console.log(ecartCase === (width * -1));
-                        console.log(ecartCase === (width));
+                        
                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === 1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else {//Si la case est sur la bordure gauche
-                        console.log('case bordure gauche');
+                        
                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === -1) {
                             return true;
                         } else {
@@ -387,7 +371,7 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 
 ";
         
-        $__internal_fb2cbeaabe5f7c86caa1961039f5ae7633a975205ad831e6c2c3bd6ee3918304->leave($__internal_fb2cbeaabe5f7c86caa1961039f5ae7633a975205ad831e6c2c3bd6ee3918304_prof);
+        $__internal_9cf229b3c8519874a971e635b951b9891f40e947dc1d2cc3eb3b4f62309faba2->leave($__internal_9cf229b3c8519874a971e635b951b9891f40e947dc1d2cc3eb3b4f62309faba2_prof);
 
     }
 
@@ -403,7 +387,7 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 
     public function getDebugInfo()
     {
-        return array (  307 => 176,  292 => 164,  282 => 157,  276 => 154,  255 => 136,  201 => 84,  199 => 83,  187 => 73,  183 => 72,  177 => 69,  172 => 68,  168 => 66,  160 => 61,  150 => 54,  146 => 53,  141 => 51,  128 => 41,  122 => 38,  118 => 37,  114 => 36,  110 => 35,  106 => 34,  100 => 31,  96 => 30,  92 => 29,  88 => 28,  84 => 27,  78 => 24,  74 => 23,  70 => 22,  66 => 21,  62 => 20,  46 => 7,  43 => 6,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  298 => 169,  286 => 160,  276 => 153,  270 => 150,  249 => 132,  187 => 73,  183 => 72,  177 => 69,  172 => 68,  168 => 66,  160 => 61,  150 => 54,  146 => 53,  141 => 51,  128 => 41,  122 => 38,  118 => 37,  114 => 36,  110 => 35,  106 => 34,  100 => 31,  96 => 30,  92 => 29,  88 => 28,  84 => 27,  78 => 24,  74 => 23,  70 => 22,  66 => 21,  62 => 20,  46 => 7,  43 => 6,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "RiskBundle::Layout.html.twig" %}*/
@@ -484,11 +468,7 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 /*                 $('.messageTour').find('p').text(tour);*/
 /* */
 /*                 if (modeValue === "selection") {*/
-/* */
 /*                     $('body').on("click", "td .slot", function () {*/
-/*                         console.log('debut traitement click');*/
-/*         {#        console.log('case attaquant: ' + caseAttaquante);#}*/
-/*         {#        console.log('case attaquee: ' + caseAttaquee);#}*/
 /*                         $('.messageUser').find('p').text('');*/
 /*                         //Enregistrement des cases selectionnées*/
 /*                         if ($(this).data('player') === modePlayer) {*/
@@ -573,22 +553,17 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 /*                         dataType: 'json',*/
 /*                         data: 'caseAttaquante=' + caseAttaquante + '&caseAttaquee=' + caseAttaquee,*/
 /*                         success: function (data) {*/
-/*                             console.log('ajax effectué');*/
 /*                             //Reinitialisation des cases*/
 /*                             caseAttaquante = '';*/
 /*                             caseAttaquee = '';*/
-/*                             console.log('attaquant: ' + caseAttaquante);*/
-/*                             console.log('defenseur: ' + caseAttaquee);*/
 /*                             $.ajax({*/
 /*                                 type: 'POST',*/
 /*                                 url: '{{ url('reloadGrille') }}',*/
 /*                                 dataType: 'json',*/
 /*                                 data: 'noParameter',*/
 /*                                 success: function (data) {*/
-/*                                     console.log('reloadGrille...');*/
 /*                                     $('.grille').remove();*/
 /*                                     var newGrille = data.grilleHTML;*/
-/*                                     console.log('chargement new grille');*/
 /*                                     $('#formFinTour').after(newGrille);*/
 /*                                     $('#player0').find('.boxes-player').text(data.player0.nbBoxes);*/
 /*                                     $('#player1').find('.boxes-player').text(data.player1.nbBoxes);*/
@@ -615,42 +590,37 @@ class __TwigTemplate_37a4de367e64b4d5138c8ad524cdd27f35f4eb9a6b379a6efdad98557a1
 /*                     var numCaseAttaquante = $('.case').find("[data-idcase='" + caseAttaquante + "']").data('numcase');*/
 /*                     var numCaseAttaquee = $('.case').find("[data-idcase='" + caseAttaquee + "']").data('numcase');*/
 /*                     var ecartCase = numCaseAttaquante - numCaseAttaquee;*/
-/*                     console.log('numCaseAttaquante :' + numCaseAttaquante);*/
-/*                     console.log('numCaseAttaquee: ' + numCaseAttaquee);*/
-/*                     console.log('ecart case: ' + ecartCase);*/
 /*                     //Je gere les cas ou case attaquante n est pas sur une bordure*/
 /*                     if (numCaseAttaquante > width && numCaseAttaquante < (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {*/
-/*                         console.log('case pas sur bordure');*/
+/*                         */
 /*                         if (ecartCase === width || ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {*/
 /*                             return true;*/
 /*                         } else {*/
 /*                             return false;*/
 /*                         }*/
 /*                     } else if (numCaseAttaquante <= width && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la première ligne*/
-/*                         console.log('case premiere ligne');*/
+/*                        */
 /*                         if (ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {*/
 /*                             return true;*/
 /*                         } else {*/
 /*                             return false;*/
 /*                         }*/
 /*                     } else if (numCaseAttaquante > (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la derniere ligne*/
-/*                         console.log('case derniere ligne');*/
+/*                        */
 /*                         if (ecartCase === width || ecartCase === 1 || ecartCase === -1) {*/
 /*                             return true;*/
 /*                         } else {*/
 /*                             return false;*/
 /*                         }*/
 /*                     } else if (numCaseAttaquante % width === 0) {//Si la case est sur la bordure droite*/
-/*                         console.log('case bordure droite');*/
-/*                         console.log(ecartCase === (width * -1));*/
-/*                         console.log(ecartCase === (width));*/
+/*                         */
 /*                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === 1) {*/
 /*                             return true;*/
 /*                         } else {*/
 /*                             return false;*/
 /*                         }*/
 /*                     } else {//Si la case est sur la bordure gauche*/
-/*                         console.log('case bordure gauche');*/
+/*                         */
 /*                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === -1) {*/
 /*                             return true;*/
 /*                         } else {*/

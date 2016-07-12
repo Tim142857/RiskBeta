@@ -21,20 +21,20 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f6ae51369bd13f79341497d0a4129dbf16277d265f5f160c59c1c58f92eed7fa = $this->env->getExtension("native_profiler");
-        $__internal_f6ae51369bd13f79341497d0a4129dbf16277d265f5f160c59c1c58f92eed7fa->enter($__internal_f6ae51369bd13f79341497d0a4129dbf16277d265f5f160c59c1c58f92eed7fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Risk/Parametres.html.twig"));
+        $__internal_7cefe56acae6555fac3cb8f8f41a4d688254f99ebfd274bcb804288af7e9d211 = $this->env->getExtension("native_profiler");
+        $__internal_7cefe56acae6555fac3cb8f8f41a4d688254f99ebfd274bcb804288af7e9d211->enter($__internal_7cefe56acae6555fac3cb8f8f41a4d688254f99ebfd274bcb804288af7e9d211_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Risk/Parametres.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f6ae51369bd13f79341497d0a4129dbf16277d265f5f160c59c1c58f92eed7fa->leave($__internal_f6ae51369bd13f79341497d0a4129dbf16277d265f5f160c59c1c58f92eed7fa_prof);
+        $__internal_7cefe56acae6555fac3cb8f8f41a4d688254f99ebfd274bcb804288af7e9d211->leave($__internal_7cefe56acae6555fac3cb8f8f41a4d688254f99ebfd274bcb804288af7e9d211_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_947c8b3cb4f4fc44913ddd4af41210b377d4cc408f2964fd0d92e8cf67c9031b = $this->env->getExtension("native_profiler");
-        $__internal_947c8b3cb4f4fc44913ddd4af41210b377d4cc408f2964fd0d92e8cf67c9031b->enter($__internal_947c8b3cb4f4fc44913ddd4af41210b377d4cc408f2964fd0d92e8cf67c9031b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3ff397bb68c8086c853756ec18b35f89a5660caa99c319d0da7d561485749c30 = $this->env->getExtension("native_profiler");
+        $__internal_3ff397bb68c8086c853756ec18b35f89a5660caa99c319d0da7d561485749c30->enter($__internal_3ff397bb68c8086c853756ec18b35f89a5660caa99c319d0da7d561485749c30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -42,6 +42,27 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
         // line 4
         echo $this->env->getExtension('routing')->getUrl("lancement");
         echo "\" class=\"form-group\" method=\"POST\">
+        <fieldset class=\"form-group\">
+            <label for=\"width\">Largeur de la grille: </label>
+            <select class=\"form-control\" id=\"width\" name=\"width\">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+            </select>
+        </fieldset>
+        <fieldset class=\"form-group\">
+            <label for=\"mode\">Mode: </label>
+            <select class=\"form-control\" id=\"mode\" name=\"mode\">
+                <option>classic</option>
+            </select>
+        </fieldset>
         <fieldset class=\"form-group\">
             <label for=\"nbPlayers\">Nombre de joueurs: </label>
             <select class=\"form-control\" id=\"nbPlayers\" name=\"nbPlayers\">
@@ -107,8 +128,12 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
             </fieldset>
         </fieldset>
 
-        <button type=\"submit\" class=\"btn btn-primary\">Lancer la partie</button>
+        <button id=\"submitParameters\" type=\"submit\" class=\"btn btn-primary\">Lancer la partie</button>
     </form>
+    <div id=\"divChargement\" class=\"hidden\">Création de la partie<br/><img alt=\"icone-chargement\" src=\"";
+        // line 93
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/risk/images/iconeChargement.gif"), "html", null, true);
+        echo "\"></div>
 
     <script>
         \$(document).ready(function () {
@@ -153,12 +178,16 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
                 \$('.ui-selectmenu-button.ui-widget.ui-state-default.ui-corner-all').width('100%');
             });
 
+            \$(\"#submitParameters\").on(\"click\", function () {
+                \$('#divChargement').removeClass(\"hidden\");
+            });
+
         });
     </script>
 
 ";
         
-        $__internal_947c8b3cb4f4fc44913ddd4af41210b377d4cc408f2964fd0d92e8cf67c9031b->leave($__internal_947c8b3cb4f4fc44913ddd4af41210b377d4cc408f2964fd0d92e8cf67c9031b_prof);
+        $__internal_3ff397bb68c8086c853756ec18b35f89a5660caa99c319d0da7d561485749c30->leave($__internal_3ff397bb68c8086c853756ec18b35f89a5660caa99c319d0da7d561485749c30_prof);
 
     }
 
@@ -174,13 +203,34 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
 
     public function getDebugInfo()
     {
-        return array (  43 => 4,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  135 => 93,  43 => 4,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "RiskBundle::Layout.html.twig" %}*/
 /* {% block body %}*/
 /* */
 /*     <form action="{{ url('lancement') }}" class="form-group" method="POST">*/
+/*         <fieldset class="form-group">*/
+/*             <label for="width">Largeur de la grille: </label>*/
+/*             <select class="form-control" id="width" name="width">*/
+/*                 <option>3</option>*/
+/*                 <option>4</option>*/
+/*                 <option>5</option>*/
+/*                 <option>6</option>*/
+/*                 <option>7</option>*/
+/*                 <option>8</option>*/
+/*                 <option>9</option>*/
+/*                 <option>10</option>*/
+/*                 <option>20</option>*/
+/*                 <option>50</option>*/
+/*             </select>*/
+/*         </fieldset>*/
+/*         <fieldset class="form-group">*/
+/*             <label for="mode">Mode: </label>*/
+/*             <select class="form-control" id="mode" name="mode">*/
+/*                 <option>classic</option>*/
+/*             </select>*/
+/*         </fieldset>*/
 /*         <fieldset class="form-group">*/
 /*             <label for="nbPlayers">Nombre de joueurs: </label>*/
 /*             <select class="form-control" id="nbPlayers" name="nbPlayers">*/
@@ -246,8 +296,9 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
 /*             </fieldset>*/
 /*         </fieldset>*/
 /* */
-/*         <button type="submit" class="btn btn-primary">Lancer la partie</button>*/
+/*         <button id="submitParameters" type="submit" class="btn btn-primary">Lancer la partie</button>*/
 /*     </form>*/
+/*     <div id="divChargement" class="hidden">Création de la partie<br/><img alt="icone-chargement" src="{{ asset('bundles/risk/images/iconeChargement.gif') }}"></div>*/
 /* */
 /*     <script>*/
 /*         $(document).ready(function () {*/
@@ -290,6 +341,10 @@ class __TwigTemplate_ff9e7183e5418d9eeec5a6ec250d35b318c6eef4ab05fc0d350d3ec5007
 /*                         .iconselectmenu("menuWidget")*/
 /*                         .addClass("ui-menu-icons customicons");*/
 /*                 $('.ui-selectmenu-button.ui-widget.ui-state-default.ui-corner-all').width('100%');*/
+/*             });*/
+/* */
+/*             $("#submitParameters").on("click", function () {*/
+/*                 $('#divChargement').removeClass("hidden");*/
 /*             });*/
 /* */
 /*         });*/

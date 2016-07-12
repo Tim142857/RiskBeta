@@ -76,11 +76,7 @@
                 $('.messageTour').find('p').text(tour);
 
                 if (modeValue === "selection") {
-
                     $('body').on("click", "td .slot", function () {
-                        console.log('debut traitement click');
-        {#        console.log('case attaquant: ' + caseAttaquante);#}
-        {#        console.log('case attaquee: ' + caseAttaquee);#}
                         $('.messageUser').find('p').text('');
                         //Enregistrement des cases selectionnées
                         if ($(this).data('player') === modePlayer) {
@@ -165,22 +161,17 @@
                         dataType: 'json',
                         data: 'caseAttaquante=' + caseAttaquante + '&caseAttaquee=' + caseAttaquee,
                         success: function (data) {
-                            console.log('ajax effectué');
                             //Reinitialisation des cases
                             caseAttaquante = '';
                             caseAttaquee = '';
-                            console.log('attaquant: ' + caseAttaquante);
-                            console.log('defenseur: ' + caseAttaquee);
                             $.ajax({
                                 type: 'POST',
                                 url: '{{ url('reloadGrille') }}',
                                 dataType: 'json',
                                 data: 'noParameter',
                                 success: function (data) {
-                                    console.log('reloadGrille...');
                                     $('.grille').remove();
                                     var newGrille = data.grilleHTML;
-                                    console.log('chargement new grille');
                                     $('#formFinTour').after(newGrille);
                                     $('#player0').find('.boxes-player').text(data.player0.nbBoxes);
                                     $('#player1').find('.boxes-player').text(data.player1.nbBoxes);
@@ -207,42 +198,37 @@
                     var numCaseAttaquante = $('.case').find("[data-idcase='" + caseAttaquante + "']").data('numcase');
                     var numCaseAttaquee = $('.case').find("[data-idcase='" + caseAttaquee + "']").data('numcase');
                     var ecartCase = numCaseAttaquante - numCaseAttaquee;
-                    console.log('numCaseAttaquante :' + numCaseAttaquante);
-                    console.log('numCaseAttaquee: ' + numCaseAttaquee);
-                    console.log('ecart case: ' + ecartCase);
                     //Je gere les cas ou case attaquante n est pas sur une bordure
                     if (numCaseAttaquante > width && numCaseAttaquante < (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {
-                        console.log('case pas sur bordure');
+                        
                         if (ecartCase === width || ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante <= width && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la première ligne
-                        console.log('case premiere ligne');
+                       
                         if (ecartCase === (width * -1) || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante > (width * height - width) && numCaseAttaquante % width !== 0 && (numCaseAttaquante - 1) % width !== 0) {//Si la case attaquante est sur la derniere ligne
-                        console.log('case derniere ligne');
+                       
                         if (ecartCase === width || ecartCase === 1 || ecartCase === -1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else if (numCaseAttaquante % width === 0) {//Si la case est sur la bordure droite
-                        console.log('case bordure droite');
-                        console.log(ecartCase === (width * -1));
-                        console.log(ecartCase === (width));
+                        
                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === 1) {
                             return true;
                         } else {
                             return false;
                         }
                     } else {//Si la case est sur la bordure gauche
-                        console.log('case bordure gauche');
+                        
                         if (ecartCase === (width * -1) || ecartCase === width || ecartCase === -1) {
                             return true;
                         } else {

@@ -256,7 +256,6 @@ class DefaultController extends Controller {
     public function attaqueAction(Request $request) {
         $caseAttaquante = filter_input(INPUT_POST, 'caseAttaquante');
         $caseAttaquee = filter_input(INPUT_POST, 'caseAttaquee');
-        dump($caseAttaquante);
 
         //Recuperation des id des cases
         $em = $this->getDoctrine()->getManager();
@@ -317,7 +316,6 @@ class DefaultController extends Controller {
         $em->flush();
         //Changement du nbSoldiers de chaque Player
         $repository = $em->getRepository('RiskBundle:Player');
-        dump($repository->countSoldiers($playerAttaquant->getId()));
         $playerAttaquant->setNbSoldiers($repository->countSoldiers($playerAttaquant->getId())[0][1]);
         $playerAttaque->setNbSoldiers($repository->countSoldiers($playerAttaque->getId())[0][1]);
 
@@ -351,8 +349,6 @@ class DefaultController extends Controller {
 
         $grille = new Grille();
         $html = $grille->getGrille($game->getWidth(), $game->getHeight(), $boxes, $player0, $player1, $player2);
-        dump($boxes);
-        dump($html);
 
 
         $resultat['grilleHTML'] = $html;
